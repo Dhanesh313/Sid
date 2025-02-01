@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.heart-button {
+    background: linear-gradient(45deg, #ff6b6b, #ff4757);
+    border: none;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.heart-button:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ff4757;
+    position: relative;
+}
+
+.glitter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('glitter.gif') repeat;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall 5s infinite;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('stars.gif') repeat;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall 5s infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
